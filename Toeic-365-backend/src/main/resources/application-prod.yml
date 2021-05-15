@@ -1,0 +1,29 @@
+server:
+  port: 8081
+
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://ec2-107-22-241-205.compute-1.amazonaws.com:5432/df68f97h62c6sf
+    username: tqdxaixxwjtjjg
+    password: d9b9497e1600a8953091764ae785c561dce0c7313767f601daa9810638d6a0e2
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    database: postgresql
+    generate-ddl: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQL92Dialect
+        hibernate.enable_lazy_load_no_trans: true
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 20MB
+      max-request-size: 20MB
+      file-size-threshold: 2KB
+
+
+file:
+  upload-dir: ./fileFolders/
